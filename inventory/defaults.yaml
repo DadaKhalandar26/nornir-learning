@@ -10,7 +10,7 @@
 
 # Connection credentials - fallback for all hosts (override in groups if needed)
 username: admin
-password: C1sco12345   # TODO: Replace with secure credential management (e.g., .env, vault)
+password: {{ PASSWORD }}   #secure credential management (e.g., .env, vault)
 
 # Custom data dictionary - arbitrary key-value pairs for your inventory
 data:

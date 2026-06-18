@@ -18,11 +18,11 @@ spine:
 
 # Leaf switches - access layer devices  
 leaf:
-  data: []                  # Custom leaf-specific data (example)
+  data: {}                  # Custom leaf-specific data (example)
 
 # Edge/border devices
 edge:
-  data: []                        # No custom data for edge devices
+  data: {}                        # No custom data for edge devices
 
 # ============ GEOGRAPHY-BASED GROUPS ============
 
@@ -50,10 +50,10 @@ site1:
 
 # Site 2 - remote site
 site2:
-  data: []                        # No site-specific overrides for Site 2
+  data: {}                        # No site-specific overrides for Site 2
 
 # ============ SPECIAL GROUPS ============
 
 # Backbone/ISP interconnect devices
 backbone:
-  data: []                        # No custom attributes
+  data: {}                        # No custom attributes
