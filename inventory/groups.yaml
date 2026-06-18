@@ -1,0 +1,33 @@
+spine:
+  data:
+    snmp_ro: corp-ro
+
+leaf:
+  data: []
+
+edge:
+  data: []
+    
+eu:
+  data:
+    ntp: 10.0.0.123
+    domain: eu.example.net
+  
+ap:
+  data:
+    ntp: 10.100.0.123
+    domain: ap.example.net
+    snmp_ro: corp-ro
+
+site1:
+  data:
+    snmp_hosts:
+      - 10.10.20.61
+    snmp_ro: public
+
+site2:
+  data: []
+    
+
+backbone:
+  data: []

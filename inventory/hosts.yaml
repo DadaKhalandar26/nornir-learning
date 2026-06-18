@@ -1,0 +1,62 @@
+site1-spine1:
+  hostname: 10.10.20.171
+  platform: nxos
+  groups: [spine, site1, ap]
+  data:
+    role: spine
+
+site1-spine2:
+  hostname: 10.10.20.172
+  platform: nxos
+  groups: [spine, site1, ap]
+  data:
+    role: spine
+
+site1-leaf1:
+  hostname: 10.10.20.173
+  platform: nxos
+  groups: [leaf, site1, ap]
+  data:
+    role: leaf
+
+site1-leaf2:
+  hostname: 10.10.20.174
+  platform: nxos
+  groups: [leaf, site1, ap]
+  data:
+    role: leaf
+
+site1-leaf3:
+  hostname: 10.10.20.175
+  platform: nxos
+  groups: [leaf, site1, ap]
+  data:
+    role: leaf
+
+site1-edge1:
+  hostname: 10.10.20.176
+  platform: nxos
+  groups: [edge, site1, ap]
+  data:
+    role: edge
+
+backbone-isn1:
+  hostname: 10.10.20.177
+  platform: nxos
+  groups: [backbone, ap]
+  data:
+    role: edge
+
+site2-spine1:
+  hostname: 10.10.20.178
+  platform: nxos
+  groups: [spine, site2, eu]
+  data:
+    role: spine
+
+s2-leaf1:
+  hostname: 10.10.20.179
+  platform: nxos
+  groups: [leaf, site2, eu]
+  data:
+    role: leaf

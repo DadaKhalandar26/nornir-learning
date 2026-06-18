@@ -1,0 +1,5 @@
+username: admin
+password: "{{ env_var }}"   # placeholder; real secrets come later
+data:
+  org: example-net
+  snmp_ro: public
