@@ -11,62 +11,62 @@
 
 # ============ SECURITY - SECRETS & CREDENTIALS ============
 .env
-.env.local                         # Local environment overrides
-*.key                              # Private keys
-*.pem                              # Certificate files
-secrets.yaml                       # Any secrets file
-credentials.json                   # Stored credentials
+.env.local
+*.key
+*.pem
+secrets.yaml
+credentials.json
 
 # ============ PYTHON ENVIRONMENTS ============
 venv/
 env/
-*.venv/                            # Another venv variant
-ENV/                               # Windows venv
-env.bak/                           # Backup of venv
-venv.bak/                          # Backup of venv
+*.venv/
+ENV/
+env.bak/
+venv.bak/
 
 # ============ PYTHON GENERATED FILES ============
-__pycache__/                       # Python cache files
-*.py[cod]                          # Compiled Python files (.pyc, .pyo, .pyd)
-*$py.class                         # Python class cache
-*.so                               # Compiled C extensions
-.Python                            # Python installation files
-build/                             # Build artifacts
-develop-eggs/                      # Setuptools development files
-dist/                              # Distribution packages
-downloads/                         # Downloaded packages
-eggs/                              # Egg files
-.eggs/                             # Egg cache
-lib/                               # Python library files
-lib64/                             # 64-bit library files
-parts/                             # Parts directory
-sdist/                             # Source distributions
-var/                               # Variable files
-wheels/                            # Wheel distributions
-*.egg-info/                        # Egg info directories
-.installed.cfg                     # Installation config
-*.egg                              # Egg files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
 # ============ TESTING & COVERAGE ============
-.pytest_cache/                     # Pytest cache
-.coverage                          # Coverage statistics
-htmlcov/                           # Coverage HTML reports
-.tox/                              # Tox test environments
-.hypothesis/                       # Hypothesis test data
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
 
 # ============ IDE & EDITOR FILES ============
-.vscode/                           # VS Code settings
-.idea/                             # JetBrains IDE settings
-*.swp                              # Vim swap files
-*.swo                              # Vim backup files
-*~                                 # Emacs backup files
-.DS_Store                          # macOS metadata
-Thumbs.db                          # Windows thumbnail cache
+.vscode/
+.idea/
+*.swp
+*.swo
+*~ 
+.DS_Store
+Thumbs.db
 
 # ============ PROJECT-SPECIFIC ============
-internal_testing/*                 # Internal testing artifacts
-*.log                              # All log files
-backup/                            # Configuration backups
-*.backup                           # Backup files
-.tmp/                              # Temporary files
+internal_testing/*
+*.log
+backups/
+*.backup
+.tmp/
 nornir.log

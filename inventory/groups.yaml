@@ -57,3 +57,6 @@ site2:
 # Backbone/ISP interconnect devices
 backbone:
   data: {}                        # No custom attributes
+
+backup:
+  data: {}

@@ -18,6 +18,7 @@ netmiko>=4.0.0
 # Scrapli plugin - alternative to Netmiko (faster, async-capable)
 nornir_scrapli>=2022.1.30
 scrapli>=2022.1.30
+nornir_napalm>=0.5.0
 
 # Optional but recommended dependencies
 # For secure credential management

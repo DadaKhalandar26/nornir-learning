@@ -17,8 +17,19 @@
 # Site 1 Spine 1 - Core device
 site1-spine1:
   hostname: 10.10.20.171           # Management IP address
-  platform: cisco_nxos            # NX-OS device type for Netmiko
-  groups: [spine, site1, ap]      # Inherits from: spine role, site1 location, ap region
+  platform: cisco_nxos           # NX-OS device type for Netmiko
+  connection_options:
+    napalm:
+      platform: nxos
+      extras:
+        optional_args:
+          transport: 'http'
+          port: 80
+    netmiko:
+      platform: cisco_nxos      # netmiko uses its own platform names
+    scrapli:
+      platform: cisco_nxos
+  groups: [spine, site1, ap, backup]      # Inherits from: spine role, site1 location, ap region
   data:
     role: spine                    # Device role for custom grouping
 
@@ -26,7 +37,14 @@ site1-spine1:
 site1-spine2:
   hostname: 10.10.20.172
   platform: cisco_nxos
-  groups: [spine, site1, ap]
+  connection_options:
+    napalm:
+      platform: nxos
+    netmiko:
+      platform: cisco_nxos      # netmiko uses its own platform names
+    scrapli:
+      platform: cisco_nxos
+  groups: [spine, site1, ap, backup]
   data:
     role: spine
 
@@ -34,7 +52,14 @@ site1-spine2:
 site1-leaf1:
   hostname: 10.10.20.173
   platform: cisco_nxos
-  groups: [leaf, site1, ap]
+  connection_options:
+    napalm:
+      platform: nxos
+    netmiko:
+      platform: cisco_nxos      # netmiko uses its own platform names
+    scrapli:
+      platform: cisco_nxos
+  groups: [leaf, site1, ap, backup]
   data:
     role: leaf                     # Access layer device
 
@@ -42,6 +67,13 @@ site1-leaf1:
 site1-leaf2:
   hostname: 10.10.20.174
   platform: cisco_nxos
+  connection_options:
+    napalm:
+      platform: nxos
+    netmiko:
+      platform: cisco_nxos      # netmiko uses its own platform names
+    scrapli:
+      platform: cisco_nxos
   groups: [leaf, site1, ap]
   data:
     role: leaf
@@ -50,6 +82,13 @@ site1-leaf2:
 site1-leaf3:
   hostname: 10.10.20.175
   platform: cisco_nxos
+  connection_options:
+    napalm:
+      platform: nxos
+    netmiko:
+      platform: cisco_nxos      # netmiko uses its own platform names
+    scrapli:
+      platform: cisco_nxos
   groups: [leaf, site1, ap]
   data:
     role: leaf
@@ -58,6 +97,13 @@ site1-leaf3:
 site1-edge1:
   hostname: 10.10.20.176
   platform: cisco_nxos
+  connection_options:
+    napalm:
+      platform: nxos
+    netmiko:
+      platform: cisco_nxos      # netmiko uses its own platform names
+    scrapli:
+      platform: cisco_nxos
   groups: [edge, site1, ap]
   data:
     role: edge                     # WAN/border device
@@ -68,6 +114,13 @@ site1-edge1:
 backbone-isn1:
   hostname: 10.10.20.177
   platform: cisco_nxos
+  connection_options:
+    napalm:
+      platform: nxos
+    netmiko:
+      platform: cisco_nxos      # netmiko uses its own platform names
+    scrapli:
+      platform: cisco_nxos
   groups: [backbone, ap]          # Backbone role, AP region
   data:
     role: edge                     # External-facing ISP connection
@@ -78,14 +131,28 @@ backbone-isn1:
 site2-spine1:
   hostname: 10.10.20.178
   platform: cisco_nxos
-  groups: [spine, site2, eu]      # Inherits from: spine role, site2 location, eu region
+  connection_options:
+    napalm:
+      platform: nxos
+    netmiko:
+      platform: cisco_nxos      # netmiko uses its own platform names
+    scrapli:
+      platform: cisco_nxos
+  groups: [spine, site2, eu, backup]      # Inherits from: spine role, site2 location, eu region
   data:
     role: spine
 
 # Site 2 Leaf 1 - Access layer (remote site)
-s2-leaf1:
+site2-leaf1:
   hostname: 10.10.20.179
   platform: cisco_nxos
-  groups: [leaf, site2, eu]       # Inherits from: leaf role, site2 location, eu region
+  connection_options:
+    napalm:
+      platform: nxos
+    netmiko:
+      platform: cisco_nxos      # netmiko uses its own platform names
+    scrapli:
+      platform: cisco_nxos
+  groups: [leaf, site2, eu, backup]       # Inherits from: leaf role, site2 location, eu region
   data:
     role: leaf
